@@ -1,0 +1,14 @@
+import sqlite3
+conn = sqlite3.connect('cadastro.db')
+cursor = conn.cursor()
+#Passando as informações de Input
+i_nome = input('Nome: ') 
+i_sobrenome = input('Sobrenome: ')
+i_cpf = input('CPF:' )
+
+cursor.execute("""INSERT INTO cadastro_clientes (nome, sobrenome, cpf) VALUES (?,?,?) """, (i_nome, i_sobrenome, i_cpf))
+
+conn.commit()
+cursor.execute(""" select * from cadastro_clientes """)
+for reg in cursor.fetchall(): print (reg)
+conn.close()

@@ -1,0 +1,7 @@
+from crud_funcao_insert_postdegrees import inserir_registro_input 
+from crud_funcao_select_postdegrees import leitura_da_tabela
+from crud_funcao_update_postdegrees import atualizar_tabela
+from crud_funcao_delete_postgres import deleta_dados
+# inserir_registro_input()
+leitura_da_tabela()
+# deleta_dados()
